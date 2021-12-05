@@ -77,7 +77,7 @@
                 <div class="content animated fadeIn">
                     <div class="set">
                         <h1 style="text-align: center">Archived</h1>
-                        <p style="text-align: center">「 1 」</p>
+                        <p style="text-align: center">「 6 」</p>
                         <ul class="timeline timeline-centered">
                             
                             
@@ -96,10 +96,126 @@
                                     </div>
                                     <div class="timeline-marker"></div>
                                     <div class="timeline-content">
-                                        <a class="timeline-title" target="_self" href="/1970/01/01/hello-world/">Hello World</a>
+                                        <a class="timeline-title" target="_self" href="/1970/01/01/Linux%E6%AD%BB%E6%9C%BA%E5%90%8E%E7%9A%84%E7%B4%A7%E6%80%A5%E6%8E%AA%E6%96%BD/"></a>
                                         <p>
-                                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
+                                            Linux死机后的紧急措施不要直接拔电源关机！这样可能会对硬件和操作系统造成损坏！
+tty中kill
+首先，按Ctrl+Alt+F2（如果不行就把F区的全部试一遍，直到进tty为止）
+
+如果进不了tty请直接略过这一节
+
+进入tty之后，使用你的帐号密码登录（这里可能由于玄学原因用不了小键盘，尽量使用键盘上字母区上方的数字按键输入数字）
+
+执行命令
+1top
+很显然，我这里的swap的fre...
+                                        </p>
+                                    </div>
+                                </li>
+                            
+                                
+                                <li class="timeline-item">
+                                    <div class="timeline-info">
+                                        <span class="gradient-text">January 01, 1970</span>
+                                    </div>
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <a class="timeline-title" target="_self" href="/1970/01/01/Manjaro%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"></a>
+                                        <p>
+                                            Manjaro Linux的安装与配置（万字长文、多图预警）安装前你需要知道
+Manjaro是Arch Linux的衍生版（至于Arch Linux,你只需要知道它是一个非常优秀的Linux发行版就可以了）
+
+如果有足够多的时间而且能保证全程不断网，建议安装Arch Linux（安装Wiki），原因如下：第一，按道理说，Manjaro的更新并没有Arch激进，但是出人意料的Arch却比Man...
+                                        </p>
+                                    </div>
+                                </li>
+                            
+                                
+                                <li class="timeline-item">
+                                    <div class="timeline-info">
+                                        <span class="gradient-text">January 01, 1970</span>
+                                    </div>
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <a class="timeline-title" target="_self" href="/1970/01/01/nmap%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"></a>
+                                        <p>
+                                            nmap的简单使用1nmap xxx.xxx.xx.xx
+直接扫描
+1nmap -sS -sV -T4 xxx.xxx.xx.xx
+
+-sS 使用TCP SYN扫描
+-sV 进行版本检测
+-T4 使用的是一种快速扫描的方式，扫描的速度范围在T0～T5之间，级别越高扫描速度越快
+在Kali Linux中，可以使用空格进行进度的查看
+1nmap -A -T4 xxx.xxx.xx.xx
+
+-A ...
+                                        </p>
+                                    </div>
+                                </li>
+                            
+                                
+                                <li class="timeline-item">
+                                    <div class="timeline-info">
+                                        <span class="gradient-text">January 01, 1970</span>
+                                    </div>
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <a class="timeline-title" target="_self" href="/1970/01/01/xhydra%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/"></a>
+                                        <p>
+                                            xhydra的基础使用
+基本思路：用nmap扫出目标主机开放的端口并找到对应协议，之后可以进行爆破
+
+xhydra是hydra的图形化界面
+
+
+使用Targetconsole–xhydra
+在Target-Single Target输入目标IP（单个）
+而Target List是批量爆破
+Port：对应端口
+Protocol：协议
+Output Options下勾选Be Verbose和Sh...
+                                        </p>
+                                    </div>
+                                </li>
+                            
+                                
+                                <li class="timeline-item">
+                                    <div class="timeline-info">
+                                        <span class="gradient-text">January 01, 1970</span>
+                                    </div>
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <a class="timeline-title" target="_self" href="/1970/01/01/%E5%AD%97%E5%85%B8%E7%94%9F%E6%88%90/"></a>
+                                        <p>
+                                            字典生成crunch的使用依然是熟悉的console-crunch-xxx
+常见参数min：设定最小字符串长度
+max：设定最大字符串长度
+-o：将生成的字典保存到指定文件
+-t：指定密码输出的格式
+-p：指定元素组合
+特殊字符% 代表数字
+^ 代表特殊符号
+@ 代表小写字母
+， 代表大写字母
+1234crunch 2 4 &gt; 1.txtcrunch 7 7 -t admin%% &g...
+                                        </p>
+                                    </div>
+                                </li>
+                            
+                                
+                                <li class="timeline-item">
+                                    <div class="timeline-info">
+                                        <span class="gradient-text">January 01, 1970</span>
+                                    </div>
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <a class="timeline-title" target="_self" href="/1970/01/01/%E6%A6%82%E5%BF%B5/"></a>
+                                        <p>
+                                            概念单例模式（Singleton Pattern）是Java中最简单的设计模式之一。
+这种模式涉及到一个单一的类，该类负责创建自己的对象，同时确保只有单个对象被创建。这个类提供了一种访问其唯一的对象的方式，可以直接访问，不需要实例化该类的对象。
+保证一个类仅有一个实例，并提供一个访问它的全局访问点。
+举例：一个人只有一个嘴巴，当你说话时（调用方法时）永远只能使用一个嘴巴，如果不使用单例设计模...
                                         </p>
                                     </div>
                                 </li>

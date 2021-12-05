@@ -5,12 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Hello World - One-AR &amp; microDreamSheep</title>
+    <title> - One-AR &amp; microDreamSheep</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="这是One-AR和microDreamSheep的联合博客,Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any pr,"> 
+    <meta name="description" content="这是One-AR和microDreamSheep的联合博客,概念单例模式（Singleton Pattern）是Java中最简单的设计模式之一。
+这种模式涉及到一个单一的类，该类负责创建自己的对象，同时确保只有单个对象被创建。这个类提供了一种访问其唯一的对象,"> 
     <meta name="author" content="One-AR &amp; microDreamSheep"> 
     <link rel="alternative" href="atom.xml" title="One-AR &amp; microDreamSheep" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -74,7 +75,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://example.com">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">Hello World</h3>
+        <h3 class="subtitle"></h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -108,20 +109,20 @@
                 
                 January 01, 1970
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/1970/01/01/hello-world/" title="Hello World" class="">Hello World</a>
+            <h3 class="post-title animated fadeInDown"><a href="/1970/01/01/%E6%A6%82%E5%BF%B5/" title="Untitled" class="">Untitled</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    2.2k
+                    6.1k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    2 mins.
+                    6 mins.
                 </span>
                 
                 
@@ -153,19 +154,22 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+            <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>单例模式（Singleton Pattern）是Java中<strong>最简单</strong>的设计模式之一。</p>
+<p>这种模式涉及到一个<strong>单一</strong>的类，该类负责创建自己的对象，同时确保只有<strong>单个对象被创建</strong>。这个类提供了一种访问其唯一的对象的方式，可以直接访问，<strong>不需要实例化该类的对象</strong>。</p>
+<p><strong>保证一个类仅有一个实例，并提供一个访问它的全局访问点。</strong></p>
+<h3 id="举例："><a href="#举例：" class="headerlink" title="举例："></a>举例：</h3><p>一个人只有一个嘴巴，当你说话时（调用方法时）永远只能使用一个嘴巴，如果不使用单例设计模式，每一次说话都会多出来一张嘴（实例化一个对象），这就不合理且占用资源</p>
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><h2 id="最基础"><a href="#最基础" class="headerlink" title="最基础"></a>最基础</h2><h5 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h5><p>懒汉时懒汉两字就代表了一切，当真正用到时才临时泡佛脚</p>
+<h6 id="实现："><a href="#实现：" class="headerlink" title="实现："></a>实现：</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> singleton = <span class="keyword">null</span>; </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">getSingleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(singleton==<span class="keyword">null</span>)&#123;</span><br><span class="line">			singleton = <span class="keyword">new</span> Singleton();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> singleton;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//私有无参构造器,只允许内部调用</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们可以看出，只有在使用时才会进行实例化，就是懒汉式</p>
+<h5 id="俄汉式"><a href="#俄汉式" class="headerlink" title="俄汉式"></a>俄汉式</h5><p>同上两字就代表了一切，加载时就实例化类</p>
+<h6 id="实现：-1"><a href="#实现：-1" class="headerlink" title="实现："></a>实现：</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> singleton = <span class="keyword">new</span> Singleton(); </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">getSingleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> singleton;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//私有无参构造器,只允许内部调用</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>只要整个项目加载就会进行实例化，就想一个人饿了，不管三七二十一，先吃了再说</p>
+<h3 id="关于以上两种的优劣"><a href="#关于以上两种的优劣" class="headerlink" title="关于以上两种的优劣"></a>关于以上两种的优劣</h3><p>懒汉式不浪费内存，但线程不安全（多线程获取时，可能会示例话多个对象，因为可能有多个线程同时通过if判断）<br>饿汉式浪费内存，但线程安全</p>
+<h2 id="解决线程安全："><a href="#解决线程安全：" class="headerlink" title="解决线程安全："></a>解决线程安全：</h2><ol>
+<li>双重检测锁（两个锁保证安全，但可能因为虚拟机原因出现问题，不推荐）</li>
+<li>推荐使用静态内部类或静态块，两者相似，这里以静态块为例<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		singleton = <span class="keyword">new</span> Singleton();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> singleton;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">getSingleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> singleton;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//私有无参构造器,只允许内部调用</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>为什么要使用静态块？<br>因为静态块只会在类加载时调用一次，详细见jvm底层</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -218,7 +222,7 @@
                     </dl>
                 </div>
                 <ul>
-                    <li><a href="/">1 <p>Articles</p></a></li>
+                    <li><a href="/">6 <p>Articles</p></a></li>
                     <li><a href="/categories">0 <p>Categories</p></a></li>
                     <li><a href="/tags">0 <p>Tags</p></a></li>
                 </ul>
@@ -229,7 +233,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text">概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BE%E4%BE%8B%EF%BC%9A"><span class="toc-number">1.0.1.</span> <span class="toc-text">举例：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.</span> <span class="toc-text">实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%9F%BA%E7%A1%80"><span class="toc-number">2.1.</span> <span class="toc-text">最基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E4%BB%A5%E4%B8%8A%E4%B8%A4%E7%A7%8D%E7%9A%84%E4%BC%98%E5%8A%A3"><span class="toc-number">2.1.1.</span> <span class="toc-text">关于以上两种的优劣</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">解决线程安全：</span></a></li></ol></li></ol>
                 </div>
             </div>
             
