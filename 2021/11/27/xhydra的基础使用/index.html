@@ -5,13 +5,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title> - One-AR &amp; microDreamSheep</title>
+    <title>xhydra的基础使用 - One-AR &amp; microDreamSheep</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="这是One-AR和microDreamSheep的联合博客,概念单例模式（Singleton Pattern）是Java中最简单的设计模式之一。
-这种模式涉及到一个单一的类，该类负责创建自己的对象，同时确保只有单个对象被创建。这个类提供了一种访问其唯一的对象,"> 
+    <meta name="description" content="这是One-AR和microDreamSheep的联合博客,xhydra的基础使用
+基本思路：用nmap扫出目标主机开放的端口并找到对应协议，之后可以进行爆破
+
+xhydra是hydra的图形化界面
+
+
+使用Targetconsole–xhydra
+在Tar,"> 
     <meta name="author" content="One-AR &amp; microDreamSheep"> 
     <link rel="alternative" href="atom.xml" title="One-AR &amp; microDreamSheep" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -75,7 +81,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://example.com">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle"></h3>
+        <h3 class="subtitle">xhydra的基础使用</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -107,22 +113,22 @@
                 
                 <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
                 
-                January 01, 1970
+                November 27, 2021
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/1970/01/01/%E6%A6%82%E5%BF%B5/" title="Untitled" class="">Untitled</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2021/11/27/xhydra%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/" title="xhydra的基础使用" class="">xhydra的基础使用</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    6.1k
+                    1k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    6 mins.
+                    1 mins.
                 </span>
                 
                 
@@ -134,6 +140,8 @@
                 
             </p>
             
+            
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/xhydra/" rel="tag">xhydra</a></li></ul>
             
         </div>
     </div>
@@ -154,22 +162,26 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>单例模式（Singleton Pattern）是Java中<strong>最简单</strong>的设计模式之一。</p>
-<p>这种模式涉及到一个<strong>单一</strong>的类，该类负责创建自己的对象，同时确保只有<strong>单个对象被创建</strong>。这个类提供了一种访问其唯一的对象的方式，可以直接访问，<strong>不需要实例化该类的对象</strong>。</p>
-<p><strong>保证一个类仅有一个实例，并提供一个访问它的全局访问点。</strong></p>
-<h3 id="举例："><a href="#举例：" class="headerlink" title="举例："></a>举例：</h3><p>一个人只有一个嘴巴，当你说话时（调用方法时）永远只能使用一个嘴巴，如果不使用单例设计模式，每一次说话都会多出来一张嘴（实例化一个对象），这就不合理且占用资源</p>
-<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><h2 id="最基础"><a href="#最基础" class="headerlink" title="最基础"></a>最基础</h2><h5 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h5><p>懒汉时懒汉两字就代表了一切，当真正用到时才临时泡佛脚</p>
-<h6 id="实现："><a href="#实现：" class="headerlink" title="实现："></a>实现：</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> singleton = <span class="keyword">null</span>; </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">getSingleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(singleton==<span class="keyword">null</span>)&#123;</span><br><span class="line">			singleton = <span class="keyword">new</span> Singleton();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> singleton;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//私有无参构造器,只允许内部调用</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>我们可以看出，只有在使用时才会进行实例化，就是懒汉式</p>
-<h5 id="俄汉式"><a href="#俄汉式" class="headerlink" title="俄汉式"></a>俄汉式</h5><p>同上两字就代表了一切，加载时就实例化类</p>
-<h6 id="实现：-1"><a href="#实现：-1" class="headerlink" title="实现："></a>实现：</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> singleton = <span class="keyword">new</span> Singleton(); </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">getSingleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> singleton;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//私有无参构造器,只允许内部调用</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>只要整个项目加载就会进行实例化，就想一个人饿了，不管三七二十一，先吃了再说</p>
-<h3 id="关于以上两种的优劣"><a href="#关于以上两种的优劣" class="headerlink" title="关于以上两种的优劣"></a>关于以上两种的优劣</h3><p>懒汉式不浪费内存，但线程不安全（多线程获取时，可能会示例话多个对象，因为可能有多个线程同时通过if判断）<br>饿汉式浪费内存，但线程安全</p>
-<h2 id="解决线程安全："><a href="#解决线程安全：" class="headerlink" title="解决线程安全："></a>解决线程安全：</h2><ol>
-<li>双重检测锁（两个锁保证安全，但可能因为虚拟机原因出现问题，不推荐）</li>
-<li>推荐使用静态内部类或静态块，两者相似，这里以静态块为例<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		singleton = <span class="keyword">new</span> Singleton();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> singleton;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">getSingleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> singleton;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//私有无参构造器,只允许内部调用</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+            <h1 id="xhydra的基础使用"><a href="#xhydra的基础使用" class="headerlink" title="xhydra的基础使用"></a>xhydra的基础使用</h1><ol>
+<li><p>基本思路：用nmap扫出目标主机开放的端口并找到对应协议，之后可以进行爆破</p>
+</li>
+<li><p>xhydra是hydra的图形化界面</p>
+</li>
 </ol>
-<p>为什么要使用静态块？<br>因为静态块只会在类加载时调用一次，详细见jvm底层</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="Target"><a href="#Target" class="headerlink" title="Target"></a>Target</h3><p>console–xhydra</p>
+<p>在Target-Single Target输入目标IP（单个）</p>
+<p>而Target List是批量爆破</p>
+<p>Port：对应端口</p>
+<p>Protocol：协议</p>
+<p>Output Options下勾选Be Verbose和Show Attempts两项即可</p>
+<h3 id="Passwords"><a href="#Passwords" class="headerlink" title="Passwords"></a>Passwords</h3><p>Username：单独爆破某帐号名</p>
+<p>UsernameList：用帐号名字典进行爆破</p>
+<p>Loop around users：每一个用户名对应所有密码，使用字典爆破需要勾选</p>
+<p>Password：单一密码选项</p>
+<p>Password List：同上，密码字典进行爆破</p>
+<h3 id="Tuning"><a href="#Tuning" class="headerlink" title="Tuning"></a>Tuning</h3><p>Number of Tasks：线程数</p>
+<h3 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h3><p>按Start开始爆破，点击Stop停止爆破，Save Output保存结果</p>
+<p>在爆破记录下，重点观察黑色加粗字体</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -222,9 +234,9 @@
                     </dl>
                 </div>
                 <ul>
-                    <li><a href="/">6 <p>Articles</p></a></li>
+                    <li><a href="/">4 <p>Articles</p></a></li>
                     <li><a href="/categories">0 <p>Categories</p></a></li>
-                    <li><a href="/tags">0 <p>Tags</p></a></li>
+                    <li><a href="/tags">1 <p>Tags</p></a></li>
                 </ul>
             </div>
             
@@ -233,7 +245,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text">概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BE%E4%BE%8B%EF%BC%9A"><span class="toc-number">1.0.1.</span> <span class="toc-text">举例：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.</span> <span class="toc-text">实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%9F%BA%E7%A1%80"><span class="toc-number">2.1.</span> <span class="toc-text">最基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E4%BB%A5%E4%B8%8A%E4%B8%A4%E7%A7%8D%E7%9A%84%E4%BC%98%E5%8A%A3"><span class="toc-number">2.1.1.</span> <span class="toc-text">关于以上两种的优劣</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">解决线程安全：</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#xhydra%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">xhydra的基础使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Target"><span class="toc-number">1.1.1.</span> <span class="toc-text">Target</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Passwords"><span class="toc-number">1.1.2.</span> <span class="toc-text">Passwords</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tuning"><span class="toc-number">1.1.3.</span> <span class="toc-text">Tuning</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Start"><span class="toc-number">1.1.4.</span> <span class="toc-text">Start</span></a></li></ol></li></ol></li></ol>
                 </div>
             </div>
             
