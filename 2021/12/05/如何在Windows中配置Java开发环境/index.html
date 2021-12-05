@@ -5,19 +5,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>xhydra的基础使用 - One-AR &amp; microDreamSheep</title>
+    <title>如何在Windows中配置Java开发环境 - One-AR &amp; microDreamSheep</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="这是One-AR和microDreamSheep的联合博客,xhydra的基础使用
-基本思路：用nmap扫出目标主机开放的端口并找到对应协议，之后可以进行爆破
+    <meta name="description" content="这是One-AR和microDreamSheep的联合博客,如何配置Java开发环境1.JDK的配置下载JDK你可以在此处下载JDK
 
-xhydra是hydra的图形化界面
+根据自己系统版本进行下载
+首次下载可能需要账号
+这里其实只需要填个邮箱就行了（小声
+安装JDK
+双击进行JDK的安装
 
 
-使用Targetconsole–xhydra
-在Tar,"> 
+,"> 
     <meta name="author" content="One-AR &amp; microDreamSheep"> 
     <link rel="alternative" href="atom.xml" title="One-AR &amp; microDreamSheep" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -81,7 +83,7 @@ xhydra是hydra的图形化界面
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://example.com">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">xhydra的基础使用</h3>
+        <h3 class="subtitle">如何在Windows中配置Java开发环境</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -113,22 +115,22 @@ xhydra是hydra的图形化界面
                 
                 <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
                 
-                November 27, 2021
+                December 05, 2021
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2021/11/27/xhydra%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/" title="xhydra的基础使用" class="">xhydra的基础使用</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2021/12/05/%E5%A6%82%E4%BD%95%E5%9C%A8Windows%E4%B8%AD%E9%85%8D%E7%BD%AEJava%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" title="如何在Windows中配置Java开发环境" class="">如何在Windows中配置Java开发环境</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    1k
+                    2.8k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    1 mins.
+                    3 mins.
                 </span>
                 
                 
@@ -141,7 +143,7 @@ xhydra是hydra的图形化界面
             </p>
             
             
-            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/xhydra/" rel="tag">xhydra</a></li></ul>
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
             
         </div>
     </div>
@@ -162,26 +164,33 @@ xhydra是hydra的图形化界面
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="xhydra的基础使用"><a href="#xhydra的基础使用" class="headerlink" title="xhydra的基础使用"></a>xhydra的基础使用</h1><ol>
-<li><p>基本思路：用nmap扫出目标主机开放的端口并找到对应协议，之后可以进行爆破</p>
-</li>
-<li><p>xhydra是hydra的图形化界面</p>
-</li>
-</ol>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="Target"><a href="#Target" class="headerlink" title="Target"></a>Target</h3><p>console–xhydra</p>
-<p>在Target-Single Target输入目标IP（单个）</p>
-<p>而Target List是批量爆破</p>
-<p>Port：对应端口</p>
-<p>Protocol：协议</p>
-<p>Output Options下勾选Be Verbose和Show Attempts两项即可</p>
-<h3 id="Passwords"><a href="#Passwords" class="headerlink" title="Passwords"></a>Passwords</h3><p>Username：单独爆破某帐号名</p>
-<p>UsernameList：用帐号名字典进行爆破</p>
-<p>Loop around users：每一个用户名对应所有密码，使用字典爆破需要勾选</p>
-<p>Password：单一密码选项</p>
-<p>Password List：同上，密码字典进行爆破</p>
-<h3 id="Tuning"><a href="#Tuning" class="headerlink" title="Tuning"></a>Tuning</h3><p>Number of Tasks：线程数</p>
-<h3 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h3><p>按Start开始爆破，点击Stop停止爆破，Save Output保存结果</p>
-<p>在爆破记录下，重点观察黑色加粗字体</p>
+            <h1 id="如何配置Java开发环境"><a href="#如何配置Java开发环境" class="headerlink" title="如何配置Java开发环境"></a>如何配置Java开发环境</h1><h2 id="1-JDK的配置"><a href="#1-JDK的配置" class="headerlink" title="1.JDK的配置"></a>1.JDK的配置</h2><h3 id="下载JDK"><a href="#下载JDK" class="headerlink" title="下载JDK"></a>下载JDK</h3><p>你可以在<a target="_blank" rel="noopener" href="https://www.oracle.com/cn/java/technologies/javase/javase8-archive-downloads.html">此处</a>下载JDK</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/5Gt7jS"><img src="https://z3.ax1x.com/2021/10/16/5Gt7jS.png" alt="5Gt7jS.png"></a></p>
+<p>根据自己系统版本进行下载</p>
+<p>首次下载可能<strong>需要账号</strong></p>
+<p>这里其实只需要填个邮箱就行了（小声</p>
+<h3 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/5GN0bQ"><img src="https://z3.ax1x.com/2021/10/16/5GN0bQ.png" alt="5GN0bQ.png"></a></p>
+<p>双击进行JDK的安装</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/5GNhb4"><img src="https://z3.ax1x.com/2021/10/16/5GNhb4.png" alt="5GNhb4.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/5GNXrD"><img src="https://z3.ax1x.com/2021/10/16/5GNXrD.png" alt="5GNXrD.png"></a></p>
+<p><strong>在这里请一定要记住JDK的安装目录！！！</strong></p>
+<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/5GUixf"><img src="https://z3.ax1x.com/2021/10/16/5GUixf.png" alt="5GUixf.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/5GUto9"><img src="https://z3.ax1x.com/2021/10/16/5GUto9.png" alt="5GUto9.png"></a></p>
+<h3 id="配置Path变量"><a href="#配置Path变量" class="headerlink" title="配置Path变量"></a>配置Path变量</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/5GaESx"><img src="https://z3.ax1x.com/2021/10/16/5GaESx.png" alt="5GaESx.png"></a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%JAVA_HOME%\bin</span><br><span class="line">%JAVA_HOME%\jre\bin</span><br></pre></td></tr></table></figure>
+
+<h3 id="检查是否配置成功"><a href="#检查是否配置成功" class="headerlink" title="检查是否配置成功"></a>检查是否配置成功</h3><p>win+r打开cmd</p>
+<p>输入：</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<p>如果出现以下内容则代表成功</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/5GaQkd"><img src="https://z3.ax1x.com/2021/10/16/5GaQkd.png" alt="5GaQkd.png"></a></p>
+<h2 id="2-IDEA的下载和安装"><a href="#2-IDEA的下载和安装" class="headerlink" title="2.IDEA的下载和安装"></a>2.IDEA的下载和安装</h2><p>你可以点击<a target="_blank" rel="noopener" href="https://www.jetbrains.com/idea/">这里</a>来下载idea</p>
+<p><strong>绝对不推荐使用Notepad++！！！</strong></p>
+<p><strong>Notepad++作者不得house！</strong></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/5GaBhn"><img src="https://z3.ax1x.com/2021/10/16/5GaBhn.png" alt="5GaBhn.png"></a></p>
+<p>安装完后图标长这样</p>
+<p>完</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -245,7 +254,7 @@ xhydra是hydra的图形化界面
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#xhydra%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">xhydra的基础使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Target"><span class="toc-number">1.1.1.</span> <span class="toc-text">Target</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Passwords"><span class="toc-number">1.1.2.</span> <span class="toc-text">Passwords</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tuning"><span class="toc-number">1.1.3.</span> <span class="toc-text">Tuning</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Start"><span class="toc-number">1.1.4.</span> <span class="toc-text">Start</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEJava%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text">如何配置Java开发环境</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-JDK%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="toc-number">1.1.</span> <span class="toc-text">1.JDK的配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDJDK"><span class="toc-number">1.1.1.</span> <span class="toc-text">下载JDK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85JDK"><span class="toc-number">1.1.2.</span> <span class="toc-text">安装JDK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">1.1.3.</span> <span class="toc-text">配置环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEPath%E5%8F%98%E9%87%8F"><span class="toc-number">1.1.4.</span> <span class="toc-text">配置Path变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E9%85%8D%E7%BD%AE%E6%88%90%E5%8A%9F"><span class="toc-number">1.1.5.</span> <span class="toc-text">检查是否配置成功</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-IDEA%E7%9A%84%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.</span> <span class="toc-text">2.IDEA的下载和安装</span></a></li></ol></li></ol>
                 </div>
             </div>
             

@@ -5,19 +5,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>xhydra的基础使用 - One-AR &amp; microDreamSheep</title>
+    <title>如何安装Windows双系统 - One-AR &amp; microDreamSheep</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="这是One-AR和microDreamSheep的联合博客,xhydra的基础使用
-基本思路：用nmap扫出目标主机开放的端口并找到对应协议，之后可以进行爆破
+    <meta name="description" content="这是One-AR和microDreamSheep的联合博客,如何安装双系统准备你需要这些东西
 
-xhydra是hydra的图形化界面
-
-
-使用Targetconsole–xhydra
-在Tar,"> 
+一个已经安装好Ventoy并有FirPE或者微PE iso镜像的大于8GB的U盘（在一般PE的配套exe里建立好EFI分区同理可行
+一台可以使用U盘启动的电脑（废,"> 
     <meta name="author" content="One-AR &amp; microDreamSheep"> 
     <link rel="alternative" href="atom.xml" title="One-AR &amp; microDreamSheep" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -81,7 +77,7 @@ xhydra是hydra的图形化界面
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://example.com">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">xhydra的基础使用</h3>
+        <h3 class="subtitle">如何安装Windows双系统</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -113,22 +109,22 @@ xhydra是hydra的图形化界面
                 
                 <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
                 
-                November 27, 2021
+                December 05, 2021
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2021/11/27/xhydra%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/" title="xhydra的基础使用" class="">xhydra的基础使用</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2021/12/05/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85Windows%E5%8F%8C%E7%B3%BB%E7%BB%9F/" title="如何安装Windows双系统" class="">如何安装Windows双系统</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    1k
+                    2.8k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    1 mins.
+                    3 mins.
                 </span>
                 
                 
@@ -141,7 +137,7 @@ xhydra是hydra的图形化界面
             </p>
             
             
-            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/xhydra/" rel="tag">xhydra</a></li></ul>
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
             
         </div>
     </div>
@@ -162,26 +158,45 @@ xhydra是hydra的图形化界面
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="xhydra的基础使用"><a href="#xhydra的基础使用" class="headerlink" title="xhydra的基础使用"></a>xhydra的基础使用</h1><ol>
-<li><p>基本思路：用nmap扫出目标主机开放的端口并找到对应协议，之后可以进行爆破</p>
+            <h1 id="如何安装双系统"><a href="#如何安装双系统" class="headerlink" title="如何安装双系统"></a>如何安装双系统</h1><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>你需要这些东西</p>
+<ol>
+<li>一个已经安装好Ventoy并有FirPE或者微PE iso镜像的大于8GB的U盘（在一般PE的配套exe里建立好EFI分区同理可行</li>
+<li>一台可以使用U盘启动的电脑（废话</li>
+<li>大于30分钟的时间（固态硬盘则差不多15分钟）</li>
+<li>你所要安装的iso文件</li>
+<li>一块大于50GB的磁盘分区</li>
+<li><a target="_blank" rel="noopener" href="https://114514810.lanzoui.com/iYtIyvpg9ta">WinNT Setup主体</a>（可选，但推荐使用，可以点击超链接下载）</li>
+<li><a target="_blank" rel="noopener" href="https://www.diskgenius.cn/">Diskgenius</a></li>
+<li>Dism++</li>
+</ol>
+<h2 id="预科阶段"><a href="#预科阶段" class="headerlink" title="预科阶段"></a>预科阶段</h2><h3 id="如何使用Diskgenius进行分区的调整"><a href="#如何使用Diskgenius进行分区的调整" class="headerlink" title="如何使用Diskgenius进行分区的调整"></a>如何使用Diskgenius进行分区的调整</h3><ol>
+<li><p><strong>警告：数据无价，谨慎操作，因为本文导致的数据损坏和丢失，本文作者不负任何责任！！操作前请看清楚，每一步都要谨慎，避免误操作！！操作之前尽量确保身边有PE盘！！这样失败了也能抢救！！</strong></p>
 </li>
-<li><p>xhydra是hydra的图形化界面</p>
+<li><p>右键<strong>想调整的分区</strong>（如果是当前系统盘或者DG所在盘会重启，所以如果你想在C盘分区出来的话建议先进PE盘，一般都有内置DG）</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/5WmOnH"><img src="https://z3.ax1x.com/2021/10/24/5WmOnH.png" alt="5WmOnH.png"></a></p>
+</li>
+<li><p>拖动最后面那条线进行调整（也可以直接在下面输入值）<strong>（建议分50GB+，这里图片由于是虚拟机所以没分多大）</strong></p>
 </li>
 </ol>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="Target"><a href="#Target" class="headerlink" title="Target"></a>Target</h3><p>console–xhydra</p>
-<p>在Target-Single Target输入目标IP（单个）</p>
-<p>而Target List是批量爆破</p>
-<p>Port：对应端口</p>
-<p>Protocol：协议</p>
-<p>Output Options下勾选Be Verbose和Show Attempts两项即可</p>
-<h3 id="Passwords"><a href="#Passwords" class="headerlink" title="Passwords"></a>Passwords</h3><p>Username：单独爆破某帐号名</p>
-<p>UsernameList：用帐号名字典进行爆破</p>
-<p>Loop around users：每一个用户名对应所有密码，使用字典爆破需要勾选</p>
-<p>Password：单一密码选项</p>
-<p>Password List：同上，密码字典进行爆破</p>
-<h3 id="Tuning"><a href="#Tuning" class="headerlink" title="Tuning"></a>Tuning</h3><p>Number of Tasks：线程数</p>
-<h3 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h3><p>按Start开始爆破，点击Stop停止爆破，Save Output保存结果</p>
-<p>在爆破记录下，重点观察黑色加粗字体</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/5WnC38"><img src="https://z3.ax1x.com/2021/10/24/5WnC38.png" alt="5WnC38.png"></a></p>
+<ol>
+<li>点击“开始”</li>
+<li>等待调整完成</li>
+</ol>
+<h2 id="正式开始"><a href="#正式开始" class="headerlink" title="正式开始"></a>正式开始</h2><h3 id="方法一：WinNT-Setup安装（仅适用于Windows系统，而且这种办法在安装的时候如果是机械硬盘电脑基本上卡的不行了，所以不要想着在老师上课的时候后台挂这个）"><a href="#方法一：WinNT-Setup安装（仅适用于Windows系统，而且这种办法在安装的时候如果是机械硬盘电脑基本上卡的不行了，所以不要想着在老师上课的时候后台挂这个）" class="headerlink" title="方法一：WinNT Setup安装（仅适用于Windows系统，而且这种办法在安装的时候如果是机械硬盘电脑基本上卡的不行了，所以不要想着在老师上课的时候后台挂这个）"></a>方法一：WinNT Setup安装（仅适用于Windows系统，而且这种办法在安装的时候如果是机械硬盘电脑基本上卡的不行了，所以不要想着在老师上课的时候后台挂这个）</h3><ol>
+<li>打开WinNT Setup<em><strong>（FirPE里面已经内置了，所以推荐重启到PE系统安装）</strong></em></li>
+<li>按照下图方法操作<a target="_blank" rel="noopener" href="https://imgtu.com/i/5WufF1"><img src="https://z3.ax1x.com/2021/10/24/5WufF1.png" alt="5WufF1.png"></a></li>
+<li><a target="_blank" rel="noopener" href="https://imgtu.com/i/5WMa80"><img src="https://z3.ax1x.com/2021/10/24/5WMa80.png" alt="5WMa80.png"></a></li>
+<li><a target="_blank" rel="noopener" href="https://imgtu.com/i/5WMDrF"><img src="https://z3.ax1x.com/2021/10/24/5WMDrF.png" alt="5WMDrF.png"></a></li>
+<li><a target="_blank" rel="noopener" href="https://imgtu.com/i/5WKEYq"><img src="https://z3.ax1x.com/2021/10/24/5WKEYq.png" alt="5WKEYq.png"></a></li>
+<li><a target="_blank" rel="noopener" href="https://imgtu.com/i/5WK8t1"><img src="https://z3.ax1x.com/2021/10/24/5WK8t1.png" alt="5WK8t1.png"></a></li>
+<li>这时候重启如果发现没有进新系统，那么就用dism++修一下引导</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/5WMqPI"><img src="https://z3.ax1x.com/2021/10/24/5WMqPI.png" alt="5WMqPI.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/5WMzqg"><img src="https://z3.ax1x.com/2021/10/24/5WMzqg.png" alt="5WMzqg.png"></a></p>
+<ol>
+<li>再重启，进入新系统配置软件和显卡驱动</li>
+</ol>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -245,7 +260,7 @@ xhydra是hydra的图形化界面
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#xhydra%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">xhydra的基础使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Target"><span class="toc-number">1.1.1.</span> <span class="toc-text">Target</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Passwords"><span class="toc-number">1.1.2.</span> <span class="toc-text">Passwords</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tuning"><span class="toc-number">1.1.3.</span> <span class="toc-text">Tuning</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Start"><span class="toc-number">1.1.4.</span> <span class="toc-text">Start</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E5%8F%8C%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.</span> <span class="toc-text">如何安装双系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-number">1.1.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%84%E7%A7%91%E9%98%B6%E6%AE%B5"><span class="toc-number">1.2.</span> <span class="toc-text">预科阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Diskgenius%E8%BF%9B%E8%A1%8C%E5%88%86%E5%8C%BA%E7%9A%84%E8%B0%83%E6%95%B4"><span class="toc-number">1.2.1.</span> <span class="toc-text">如何使用Diskgenius进行分区的调整</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E5%BC%8F%E5%BC%80%E5%A7%8B"><span class="toc-number">1.3.</span> <span class="toc-text">正式开始</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9AWinNT-Setup%E5%AE%89%E8%A3%85%EF%BC%88%E4%BB%85%E9%80%82%E7%94%A8%E4%BA%8EWindows%E7%B3%BB%E7%BB%9F%EF%BC%8C%E8%80%8C%E4%B8%94%E8%BF%99%E7%A7%8D%E5%8A%9E%E6%B3%95%E5%9C%A8%E5%AE%89%E8%A3%85%E7%9A%84%E6%97%B6%E5%80%99%E5%A6%82%E6%9E%9C%E6%98%AF%E6%9C%BA%E6%A2%B0%E7%A1%AC%E7%9B%98%E7%94%B5%E8%84%91%E5%9F%BA%E6%9C%AC%E4%B8%8A%E5%8D%A1%E7%9A%84%E4%B8%8D%E8%A1%8C%E4%BA%86%EF%BC%8C%E6%89%80%E4%BB%A5%E4%B8%8D%E8%A6%81%E6%83%B3%E7%9D%80%E5%9C%A8%E8%80%81%E5%B8%88%E4%B8%8A%E8%AF%BE%E7%9A%84%E6%97%B6%E5%80%99%E5%90%8E%E5%8F%B0%E6%8C%82%E8%BF%99%E4%B8%AA%EF%BC%89"><span class="toc-number">1.3.1.</span> <span class="toc-text">方法一：WinNT Setup安装（仅适用于Windows系统，而且这种办法在安装的时候如果是机械硬盘电脑基本上卡的不行了，所以不要想着在老师上课的时候后台挂这个）</span></a></li></ol></li></ol></li></ol>
                 </div>
             </div>
             

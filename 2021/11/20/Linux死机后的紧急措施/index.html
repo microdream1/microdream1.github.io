@@ -10,14 +10,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="这是One-AR和microDreamSheep的联合博客,xhydra的基础使用
-基本思路：用nmap扫出目标主机开放的端口并找到对应协议，之后可以进行爆破
+    <meta name="description" content="这是One-AR和microDreamSheep的联合博客,Linux死机后的紧急措施不要直接拔电源关机！这样可能会对硬件和操作系统造成损坏！
+tty中kill
+首先，按Ctrl+Alt+F2（如果不行就把F区的全部试一遍，直到进tty为止）
 
-xhydra是hydra的图形化界面
-
-
-使用Targetconsole–xhydra
-在Tar,"> 
+如果进不了t,"> 
     <meta name="author" content="One-AR &amp; microDreamSheep"> 
     <link rel="alternative" href="atom.xml" title="One-AR &amp; microDreamSheep" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -113,16 +110,16 @@ xhydra是hydra的图形化界面
                 
                 <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
                 
-                November 27, 2021
+                November 20, 2021
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2021/11/27/xhydra%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/" title="xhydra的基础使用" class="">xhydra的基础使用</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2021/11/20/Linux%E6%AD%BB%E6%9C%BA%E5%90%8E%E7%9A%84%E7%B4%A7%E6%80%A5%E6%8E%AA%E6%96%BD/" title="xhydra的基础使用" class="">xhydra的基础使用</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    1k
+                    1.1k
                 </span>
                 
                 
@@ -141,7 +138,7 @@ xhydra是hydra的图形化界面
             </p>
             
             
-            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/xhydra/" rel="tag">xhydra</a></li></ul>
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Linux/" rel="tag">Linux</a></li></ul>
             
         </div>
     </div>
@@ -162,26 +159,21 @@ xhydra是hydra的图形化界面
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="xhydra的基础使用"><a href="#xhydra的基础使用" class="headerlink" title="xhydra的基础使用"></a>xhydra的基础使用</h1><ol>
-<li><p>基本思路：用nmap扫出目标主机开放的端口并找到对应协议，之后可以进行爆破</p>
+            <h1 id="Linux死机后的紧急措施"><a href="#Linux死机后的紧急措施" class="headerlink" title="Linux死机后的紧急措施"></a>Linux死机后的紧急措施</h1><p>不要直接拔电源关机！这样可能会对硬件和操作系统造成损坏！</p>
+<h3 id="tty中kill"><a href="#tty中kill" class="headerlink" title="tty中kill"></a>tty中kill</h3><ol>
+<li><p>首先，按Ctrl+Alt+F2（如果不行就把F区的全部试一遍，直到进tty为止）</p>
 </li>
-<li><p>xhydra是hydra的图形化界面</p>
+<li><p>如果进不了tty请直接略过这一节</p>
 </li>
+<li><p>进入tty之后，使用你的帐号密码登录（这里可能由于玄学原因用不了小键盘，尽量使用键盘上字母区上方的数字按键输入数字）</p>
+</li>
+<li><p>执行命令</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">top</span><br></pre></td></tr></table></figure></li>
+<li><p>很显然，我这里的swap的free显示0.0，物理内存也被用的差不多了，所以要选几个内存占用大的进程进行kill<a target="_blank" rel="noopener" href="https://imgtu.com/i/IO53DS"><img src="https://z3.ax1x.com/2021/11/20/IO53DS.jpg" alt="IO53DS.jpg"></a></p>
+</li>
+<li><p>查看占用最高的进程，视其重要性将其kill</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill xxxxxx</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="Target"><a href="#Target" class="headerlink" title="Target"></a>Target</h3><p>console–xhydra</p>
-<p>在Target-Single Target输入目标IP（单个）</p>
-<p>而Target List是批量爆破</p>
-<p>Port：对应端口</p>
-<p>Protocol：协议</p>
-<p>Output Options下勾选Be Verbose和Show Attempts两项即可</p>
-<h3 id="Passwords"><a href="#Passwords" class="headerlink" title="Passwords"></a>Passwords</h3><p>Username：单独爆破某帐号名</p>
-<p>UsernameList：用帐号名字典进行爆破</p>
-<p>Loop around users：每一个用户名对应所有密码，使用字典爆破需要勾选</p>
-<p>Password：单一密码选项</p>
-<p>Password List：同上，密码字典进行爆破</p>
-<h3 id="Tuning"><a href="#Tuning" class="headerlink" title="Tuning"></a>Tuning</h3><p>Number of Tasks：线程数</p>
-<h3 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h3><p>按Start开始爆破，点击Stop停止爆破，Save Output保存结果</p>
-<p>在爆破记录下，重点观察黑色加粗字体</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -245,7 +237,7 @@ xhydra是hydra的图形化界面
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#xhydra%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">xhydra的基础使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Target"><span class="toc-number">1.1.1.</span> <span class="toc-text">Target</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Passwords"><span class="toc-number">1.1.2.</span> <span class="toc-text">Passwords</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tuning"><span class="toc-number">1.1.3.</span> <span class="toc-text">Tuning</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Start"><span class="toc-number">1.1.4.</span> <span class="toc-text">Start</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux%E6%AD%BB%E6%9C%BA%E5%90%8E%E7%9A%84%E7%B4%A7%E6%80%A5%E6%8E%AA%E6%96%BD"><span class="toc-number">1.</span> <span class="toc-text">Linux死机后的紧急措施</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#tty%E4%B8%ADkill"><span class="toc-number">1.0.1.</span> <span class="toc-text">tty中kill</span></a></li></ol></li></ol></li></ol>
                 </div>
             </div>
             
